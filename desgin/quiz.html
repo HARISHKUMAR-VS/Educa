@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quick Quiz</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      .quiz-container {
+         max-width: 900px;
+         margin: 3rem auto;
+         background: var(--light-bg);
+         padding: 2rem;
+         border-radius: 10px;
+         box-shadow: var(--box-shadow);
+      }
+
+      .quiz-container h2 {
+         margin-bottom: 1rem;
+         color: var(--black);
+      }
+
+      .question {
+         margin-bottom: 1.5rem;
+      }
+
+      .question h3 {
+         margin-bottom: 0.5rem;
+      }
+
+      .options label {
+         display: block;
+         margin-bottom: 0.3rem;
+         cursor: pointer;
+      }
+
+      #submit-btn {
+         margin-top: 1rem;
+         background: var(--main-color);
+         color: #fff;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      #result {
+         margin-top: 1rem;
+         font-weight: bold;
+         color: var(--green);
+      }
+
+      select {
+         padding: 0.5rem;
+         margin-bottom: 1rem;
+         border-radius: 5px;
+         border: 1px solid #ccc;
+      }
+   </style>
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Educa</a>
+      <form action="search.html" method="get" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+   </section>
+</header>
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">Harish Kumar</h3>
+      <p class="role">student</p>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="quiz.html"><i class="fas fa-pen"></i><span>quiz</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+</div>
+
+<section class="quiz-container">
+   <h2>HTML Quick Quiz</h2>
+
+   <form id="quizForm">
+      <div class="question">
+         <h3>1. What does HTML stand for?</h3>
+         <div class="options">
+            <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+            <label><input type="radio" name="q1" value="b"> High Text Machine Language</label>
+            <label><input type="radio" name="q1" value="c"> Hyperlinks and Text Markup Language</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>2. Choose the correct HTML element for the largest heading:</h3>
+         <div class="options">
+            <label><input type="radio" name="q2" value="a"> &lt;heading&gt;</label>
+            <label><input type="radio" name="q2" value="b"> &lt;h1&gt;</label>
+            <label><input type="radio" name="q2" value="c"> &lt;head&gt;</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>3. What is the correct HTML element for inserting a line break?</h3>
+         <div class="options">
+            <label><input type="radio" name="q3" value="a"> &lt;br&gt;</label>
+            <label><input type="radio" name="q3" value="b"> &lt;break&gt;</label>
+            <label><input type="radio" name="q3" value="c"> &lt;lb&gt;</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>4. Which element is used to define important text?</h3>
+         <div class="options">
+            <label><input type="radio" name="q4" value="a"> &lt;strong&gt;</label>
+            <label><input type="radio" name="q4" value="b"> &lt;b&gt;</label>
+            <label><input type="radio" name="q4" value="c"> &lt;em&gt;</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>5. How can you make a numbered list?</h3>
+         <div class="options">
+            <label><input type="radio" name="q5" value="a"> &lt;ul&gt;</label>
+            <label><input type="radio" name="q5" value="b"> &lt;ol&gt;</label>
+            <label><input type="radio" name="q5" value="c"> &lt;dl&gt;</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>6. What is the correct HTML for making a text input field?</h3>
+         <div class="options">
+            <label><input type="radio" name="q6" value="a"> &lt;input type="text"&gt;</label>
+            <label><input type="radio" name="q6" value="b"> &lt;textbox&gt;</label>
+            <label><input type="radio" name="q6" value="c"> &lt;input text="true"&gt;</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>7. Which HTML attribute specifies an alternate text for an image?</h3>
+         <div class="options">
+            <label><input type="radio" name="q7" value="a"> alt</label>
+            <label><input type="radio" name="q7" value="b"> title</label>
+            <label><input type="radio" name="q7" value="c"> description</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>8. How do you create a hyperlink in HTML?</h3>
+         <div class="options">
+            <label><input type="radio" name="q8" value="a"> &lt;a href="url"&gt;Link&lt;/a&gt;</label>
+            <label><input type="radio" name="q8" value="b"> &lt;link url="url"&gt;Link&lt;/link&gt;</label>
+            <label><input type="radio" name="q8" value="c"> &lt;a url="url"&gt;Link&lt;/a&gt;</label>
+         </div>
+      </div>
+
+      <div class="question">
+         <h3>9. Which element defines a table row?</h3>
+         <div class="options">
+            <label><input type="radio" name="q9" value="a"> &lt;tr&gt;</label>
+            <label><input type="radio" name="q9" value="b"> &lt;td&gt;</label>
+            <label><input type="radio" name="q9" value="c"> &lt;table&gt;</label>
+         </div>
+      </div>
+      
+      <div class="question">
+         <h3>10. Which doctype is correct for HTML5?</h3>
+         <div class="options">
+            <label><input type="radio" name="q10" value="a"> &lt;!DOCTYPE html&gt;</label>
+            <label><input type="radio" name="q10" value="b"> &lt;DOCTYPE HTML PUBLIC&gt;</label>
+            <label><input type="radio" name="q10" value="c"> &lt;!HTML5&gt;</label>
+         </div>
+      </div>
+
+      <button type="button" id="submit-btn">Submit</button>
+      <div id="result"></div>
+   </form>
+</section>
+
+<script>
+   document.getElementById("submit-btn").onclick = function () {
+      let score = 0;
+      const answers = {
+         q1: "a",
+         q2: "b",
+         q3: "a",
+         q4: "a",
+         q5: "b",
+         q6: "a",
+         q7: "a",
+         q8: "a",
+         q9: "a",
+         q10: "a"
+      };
+
+      for (let key in answers) {
+         const selected = document.querySelector(`input[name="${key}"]:checked`);
+         if (selected && selected.value === answers[key]) {
+            score++;
+         }
+      }
+
+      document.getElementById("result").innerText = `You scored ${score} out of 10`;
+   };
+</script>
+
+</body>
+</html>
